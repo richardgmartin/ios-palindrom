@@ -33,8 +33,12 @@
     for (int i = 0; i < length / 2; i++) {
         NSLog(@"palidrome character: %c at i: %d", [palindrome characterAtIndex:i], i);
         
+        if ([palindrome characterAtIndex:i] != [palindrome characterAtIndex:length - 1 - i]) {
+            self.label.text = @"Gnarly, dude. Not a palindrome.";
+            return;
+        }
     }
+    self.label.text = @"Oh, yeah! A palindrome!";
 }
-
 
 @end
