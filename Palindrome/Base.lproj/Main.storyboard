@@ -46,6 +46,13 @@
                                     <action selector="checkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cFx-EG-BTk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkb-UD-E9K">
+                                <rect key="frame" x="275" y="134" width="51" height="30"/>
+                                <state key="normal" title="Create!"/>
+                                <connections>
+                                    <action selector="onButtonCreate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kex-bQ-Zjd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

@@ -41,4 +41,15 @@
     self.label.text = @"Oh, yeah! A palindrome!";
 }
 
+- (IBAction)onButtonCreate:(UIButton *)sender {
+    
+    NSString *firstPart = self.textField.text;
+    NSMutableString *secondPart = [NSMutableString new];
+    
+    // insert loop logic to create palindrome
+    
+    
+    self.label.text = [NSString stringWithFormat:@"%@%@", firstPart, secondPart];
+    
+}
 @end
