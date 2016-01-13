@@ -44,10 +44,30 @@
 - (IBAction)onButtonCreate:(UIButton *)sender {
     
     NSString *firstPart = self.textField.text;
-    NSMutableString *secondPart = [NSMutableString new];
+    NSString *secondPart = [NSString new];
     
     // insert loop logic to create palindrome
     
+    NSUInteger stringLength = [firstPart length];
+    
+    if (stringLength % 2 != 0) {
+        
+        for (int i = (int)stringLength - 1; i >= 0; i--) {
+            
+            NSString *tempFirstPart = [NSString stringWithFormat:@"%c", [firstPart characterAtIndex:i]];
+            
+            secondPart = [secondPart stringByAppendingString:tempFirstPart];
+        }
+    } else {
+        
+        for (int i = (int)stringLength - 2; i >= 0; i--) {
+            
+            NSString *tempFirstPart = [NSString stringWithFormat:@"%c", [firstPart characterAtIndex:i]];
+            
+            secondPart = [secondPart stringByAppendingString:tempFirstPart];
+        }
+    
+    }
     
     self.label.text = [NSString stringWithFormat:@"%@%@", firstPart, secondPart];
     
